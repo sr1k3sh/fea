@@ -1,0 +1,11 @@
+body{
+    background-color: var(--dusty-pink);
+}
+
+.container-xl{
+    padding: 0 32px;
+
+    @include media-breakpoint-up(md){
+        padding: 0 60px;
+    }
+}

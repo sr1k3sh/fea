@@ -1,0 +1,80 @@
+.btn{
+    padding: 12px 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    &-large{
+        padding: 16px 16px;
+    }
+
+    &-medium{
+        padding: 12px 16px;
+    }
+
+    &-small{
+        padding: 8px 16px;
+    }
+
+    &-primary{
+        background-color: var(--green);
+        color: $white;
+        &:hover{
+            background-color: var(--green-light);
+        }
+
+        &:active , &:focus{
+        }
+
+        &:disabled,&.disabled{
+            background-color: var(--disabled);
+            color: #9E9E9E;
+        }
+    }
+
+    &-secondary{
+
+        &:hover{
+
+        }
+        &--large{
+
+        }
+
+        &:active , &:focus{
+
+        }
+    }
+
+    &-outline{
+        &-primary{
+            border: 1px solid $primary;
+            color: $primary;
+            background-color: $white;
+            &:hover{
+                background-color: $primary;
+                color: $white;
+            }
+
+            &:disabled, &.disabled{
+                color: #9E9E9E;
+                border-color: var(--disabled);
+            }
+        }
+
+        &-secondary{
+            border: 1px solid $secondary;
+            color: $black;
+            background-color: $white;
+            &:hover{
+                background-color: $secondary;
+                color: $white;
+            }
+
+            &:disabled, &.disabled{
+                color: #9E9E9E;
+                border-color: var(--disabled);
+            }
+        }
+    }
+
+}

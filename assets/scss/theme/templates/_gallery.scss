@@ -1,0 +1,77 @@
+.fe-gallery{
+    $self: &;
+
+    &__section{
+        overflow-x: clip;
+        padding: 32px 0 64px;
+        @include media-breakpoint-up(md){
+            padding: 60px 0 120px;
+        }
+        background-color: $white;
+    }
+
+    &__card{
+        padding: 12px;
+        @include media-breakpoint-up(md){
+            padding: 40px;
+        }
+        border: 1px solid var(--dusty-pink);
+        &--portrait{
+            #{$self}__img{
+                width: 224px;
+                height: 240px;
+                @include media-breakpoint-up(md){
+                    aspect-ratio: 321/400;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    &__img{
+        width: 224px;
+        height: 140px;
+        @include media-breakpoint-up(md){
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 321/240;
+        }
+    }
+
+    &__fig{
+        margin: 0;
+    }
+
+    &__caption{
+        @extend .fe__p2;
+        color: var(--gret-purp);
+        margin-top: 8px;
+        @include media-breakpoint-up(md){
+            margin-top: 12px;
+        }
+        max-width: 224px;
+    }
+
+    &__section-title{
+        @extend h5;
+        color: $primary;
+    }
+
+    &__border{
+        &--right{
+            border-right: 0;
+        }
+
+        &--left{
+            border-left: 0;
+        }
+    }
+
+
+    &__col-wrapper{
+        #{$self}__section-title{
+            margin-bottom: 60px;
+        }
+    }
+}

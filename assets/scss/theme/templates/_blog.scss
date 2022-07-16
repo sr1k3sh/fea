@@ -1,0 +1,272 @@
+.fe-news{
+    $self: &;
+
+    &__section{
+        padding: 32px 0;
+    }
+
+    &__section-title{
+        color: $primary;
+        margin-bottom: 60px;
+        margin-top: 98px;
+    }
+
+    &__col-wrapper{
+        #{$self}__more{
+            margin-top: 40px;
+        }
+    }
+
+    &__card{
+        border: 1px solid $white;
+        padding: 40px 41px 91px 40px;
+        &--single{
+            border-right: 0;
+        }
+
+        &--small{
+            padding-bottom: 47px;
+            border-top: 0;
+            .fe__h2{
+                @extend .fe__p1;
+                color: var(--dark-grey);
+                & a{
+                    text-decoration: none;
+                    color: var(--dark-grey);
+                }
+            }
+
+            #{$self}__figure{
+                & img{
+                    width: 100%;
+                    height: 100%;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+
+    &__figure{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        & img{
+            height: 222px;
+            object-fit: cover;
+        }
+    }
+
+    &__caption{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        & h3{
+            color: var(--dark-grey);
+            margin-bottom: 0;
+            & a{
+                text-decoration: none;
+                color: var(--dark-grey);
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    &__date{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        font-family: var(--inter);
+        color: var(--gret-purp);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        & span{
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+            font-family: var(--inter);
+            color: var(--gret-purp);
+            display: flex;
+            align-items: center;
+            &:first-child{
+                &::after{
+                    content:"";
+                    width:32px;
+                    height: 1px;
+                    background-color: var(--mid-grey);
+                    display: flex;
+                    margin: 0 4px;
+                }
+            }
+        }
+    }
+
+    &__slider-wrapper{
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+    }
+
+    &__slider-row{
+        #{$self}__section-title{
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+    }
+
+    &__slider{
+        width: 256px;
+
+
+        #{$self}__card{
+            border: 1px solid $white;
+            border-right:0;
+            padding: 16px 16px 51px;
+        }
+
+        #{$self}__figure{
+            & img{
+                width: 222px;
+                height: 140px;
+                object-fit: cover;
+            }
+        }
+
+        #{$self}__caption{
+            margin-top: 16px;
+
+            & .fe__h2{
+                @extend h3;
+                font-weight: 400;
+                font-size: 20px !important;
+                line-height: 120%;
+                letter-spacing: -0.02em;
+                & a{
+                    text-decoration: none;
+                    color: var(--dark-grey);
+                }
+            }
+        }
+
+        &:last-child{
+            #{$self}__card{
+                border-right: 1px solid $white;
+            }
+        }
+    }
+
+
+    &__more{
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        text-decoration: none;
+        color: var(--dark-grey);
+        margin-top: 25px;
+        padding-bottom: 12px;
+        & span{
+            margin-right: 12px;
+        }
+        position: relative;
+        &::after{
+            transition: 0.5s;
+            width: 0;
+            content: "";
+            position: absolute;
+        }
+
+        &:hover{
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: var(--mid-grey);
+            }
+        }
+    }
+}
+
+
+.fe-benifits{
+
+    &__section{
+        overflow: hidden;
+        padding: 24px 0 68px;
+        @include media-breakpoint-up(md){
+            padding: 80px 0 193px;
+        }
+        background-color: $white;
+    }
+
+    &__title{
+        color: $primary;
+        margin-bottom: 17px;
+        @include media-breakpoint-up(md){
+            margin-bottom: 60px;
+        }
+    }
+
+    &__card{
+        margin-right: 16px;
+        // padding: 30px 30px 113px;
+        @include media-breakpoint-up(md){
+            margin-right: 55px;
+        }
+    }
+
+    &__figure{
+        margin-bottom: 0;
+        & img{
+            width: 202px;
+            height: 269px;
+            margin-bottom: 12px;
+            @include media-breakpoint-up(md){
+                width: 255px;
+                height: 340px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__caption{
+        max-width: 202px;
+        @include media-breakpoint-up(md){
+            max-width: 255px;
+        }
+        & .fe__p1{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 140%;
+            letter-spacing: -0.01em;
+            margin-bottom: 0;
+            text-decoration: none;
+            color: var(--dark-grey);
+        }
+    }
+
+    &__custom-container{
+        max-width: 125%;
+        margin: 0 auto;
+        width: 10000px;
+    }
+
+    &__anchor-img{
+        & img{
+            transform: scale(1);
+            transition: 0.3s;
+        }
+        &:hover{
+            & img{
+                transform: scale(1.02);
+            }
+        }
+    }
+}

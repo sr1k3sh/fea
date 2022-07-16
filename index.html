@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fea </title>
+    <!-- css part -->
+    <link rel="stylesheet" href="./dist/style.css">
+    <!-- slick slider css -->
+    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="./node_modules/slick-carousel/slick/slick-theme.css">
+
+    <!-- splide css -->
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/themes/splide-sea-green.min.css">
+
+    <!-- aos css -->
+    <link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+
+    <!-- js part -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- jquery -->
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <!-- header add fe-header__main-menu--fixed for fix header -->
+    <header class="fe-header__main-menu fe-header__main-menu--fixed"
+    data-aos="fade-in"
+    data-aos-duration="1000"
+    data-aos-offset="600"
+    data-aos-delay="500">
+        <nav class="fe-header__topbar">
+            <div class="container-xl fe-header__topbar-container">
+                <ul class="fe-header__topbar-list">
+                    <li class="fe-header__topbar-item">
+                        <a class="fe__icon fe__icon--twitter" href="#">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.38744 4.25625L9.42934 4.9483L8.73087 4.86356C6.18844 4.53872 3.96731 3.4371 2.08144 1.58693L1.15946 0.668915L0.92198 1.34684C0.419082 2.85804 0.740378 4.45398 1.78808 5.52735C2.34686 6.12054 2.22113 6.20528 1.25725 5.85219C0.92198 5.7392 0.628623 5.65446 0.600684 5.69683C0.502898 5.7957 0.838164 7.08092 1.10358 7.58937C1.46679 8.29553 2.20717 8.98758 3.01739 9.39716L3.70189 9.72199L2.89167 9.73612C2.10938 9.73612 2.08144 9.75024 2.16526 10.0468C2.44464 10.9649 3.54823 11.9394 4.77753 12.3631L5.64364 12.6597L4.88929 13.1116C3.77174 13.7613 2.45861 14.1285 1.14549 14.1567C0.516868 14.1709 0 14.2273 0 14.2697C0 14.411 1.70427 15.2019 2.69609 15.5126C5.67158 16.4306 9.20583 16.0351 11.86 14.4674C13.7459 13.3517 15.6318 11.1343 16.5118 8.98758C16.9868 7.84359 17.4617 5.75333 17.4617 4.75057C17.4617 4.10089 17.5037 4.01615 18.2859 3.23937C18.7469 2.78742 19.18 2.2931 19.2638 2.15187C19.4035 1.88352 19.3895 1.88352 18.6771 2.12362C17.4897 2.54732 17.3221 2.49083 17.9088 1.85528C18.3418 1.40333 18.8587 0.584174 18.8587 0.344077C18.8587 0.301707 18.6491 0.372324 18.4117 0.499434C18.1602 0.640668 17.6014 0.852518 17.1824 0.979629L16.428 1.21973L15.7435 0.753655C15.3663 0.499434 14.8355 0.216967 14.5561 0.132227C13.8437 -0.0655006 12.7541 -0.0372539 12.1115 0.18872C10.3653 0.824272 9.26171 2.46258 9.38744 4.25625Z" fill="#74788A"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="fe-header__topbar-item">
+                        <a class="fe__icon fe__icon--linkedin" href="#">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6399 9.80982C16.6399 6.49387 14.8803 4.95057 12.5332 4.95057C10.6395 4.95057 9.79171 5.9984 9.31832 6.73347V5.20436H5.75118C5.79819 6.21736 5.75118 16 5.75118 16H9.31832V9.97082C9.31832 9.64818 9.34147 9.32632 9.43578 9.09531C9.69356 8.45074 10.2805 7.78338 11.2659 7.78338C12.557 7.78338 13.0732 8.77331 13.0732 10.224V15.9997H16.6397L16.6399 9.80982Z" fill="#74788A"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.7764 5.20431H0.209685V16H3.7764V5.20431Z" fill="#74788A"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.01253 1.86473C3.98939 0.806221 3.23799 0 2.01784 0C0.797692 0 0 0.806221 0 1.86473C0 2.90131 0.774115 3.73074 1.97154 3.73074H1.99434C3.23799 3.73074 4.01253 2.90131 4.01253 1.86473Z" fill="#74788A"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-xl fe-header__navbar">
+            <div class="container-xl fe-header__navbar-container">
+                <div class="fe-header__logo-wrapper">
+                    <a class="fe-header__navbar-brand navbar-brand" href="#"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1000">
+                        <img class="fe-header__logo-img" src="./assets/icons/logo.svg"/>
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <span class="top"></span>
+                            <span class="middle-1"></span>
+                            <span class="middle"></span>
+                            <span class="middle-2"></span>
+                            <span class="bottom"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="fe-header__navbar-collapse collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="fe-header__navbar-dropdown navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="fe-header__nav-item"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1000"
+                        >
+                            <a class="fe-header__nav-link fe__p2 active" aria-current="page" href="#" role="button">Founders</a>
+                        </li>
+                        <li class="fe-header__nav-item"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1100">
+                            <a class="fe-header__nav-link fe__p2" href="#" role="button">Beneficiaries</a>
+                        </li>
+                        <li class="fe-header__nav-item"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1200">
+                            <a class="fe-header__nav-link fe__p2" href="#" role="button">Scholarships</a>
+                        </li>
+                        <li class="fe-header__nav-item"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1300">
+                            <a class="fe-header__nav-link fe__p2" href="#" role="button">Press</a>
+                        </li>
+                        <li class="fe-header__nav-item"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1400">
+                            <a class="fe-header__nav-link fe__p2" href="#" role="button">Blog</a>
+                        </li>
+                        <li class="fe-header__nav-item"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1500">
+                            <a class="fe-header__nav-link fe__p2" href="#" role="button">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <!-- add  fe__main-site--fixed to add padding for fix header -->
+    <main class="fe__main-site fe__main-site--fixed">
+        <!-- hero banner section -->
+        <section class="fe-banner__section"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+            data-aos-delay="1000">
+            <div class="fe-header__hero">
+                <div class="container-xl fe-header__hero-container">
+                    <div class="fe-header__hero-wrapper">
+                        <h1 class="fe-header__slogan"
+                        data-aos="fade-down"
+                        data-aos-offset="200"
+                        data-aos-delay="1000"
+                        data-aos-duration="1000"
+                        data-aos-easing="ease-in-out"
+                        data-aos-once="false"
+                        data-aos-anchor-placement="top-center">Ullamcorper diam turpis egestas egestas fames enim risus sed proin</h1>
+                        <a href="#" class="fe-header__quick-link fe__b1"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-offset="200"
+                        data-aos-delay="2000">
+                            <span class="fe__b1">Read more</span>
+                            <span>
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1454 10L5 3.77778L6.75584 2L13.7792 9.11111C14.2641 9.60203 14.2641 10.398 13.7792 10.8889L6.75584 18L5 16.2222L11.1454 10Z" fill="#3C3C3C"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="container-xl fe-header__hero-container pe-0">
+                    <div class="fe-header__hero-img">
+                        <img src="./assets/images/img1.jpg" alt="..."
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="2200">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- featured news section -->
+        <section class="fe-news__section">
+            <div class="container-xl">
+                <div class="row d-none d-lg-flex">
+                    <div class="col-md-6 pe-0">
+                        <div class="fe-news__col-wrapper">
+                            <h5 class="fe-news__section-title"
+                                data-aos="fade-in"
+                                data-aos-duration="1000"
+                                data-aos-delay="1000">latest news</h5>
+                            <article class="fe-news__card fe-news__card--single"
+                                data-aos="fade-right"
+                                data-aos-duration="1000"
+                                data-aos-delay="300"
+                                data-aos-mirror="true">
+                                <figure class="fe-news__figure">
+                                    <img src="./assets/images/lanscape-2.png" alt="...">
+                                    <figcaption class="fe-news__caption">
+                                        <h6 class="fe-news__date"><span>november 19</span><span>2020</span></h6>
+                                        <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                            <a class="fe-news__more"  href="#"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="1500"
+                                data-aos-mirror="true">
+                                <span class="fe__b1">See all news</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.91636 7.99997L4 3.0222L5.40467 1.59998L11.0234 7.28886C11.4113 7.6816 11.4113 8.31835 11.0234 8.71109L5.40467 14.4L4 12.9778L8.91636 7.99997Z" fill="#3C3C3C"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ps-0">
+                        <div class="fe-news__col-wrapper">
+                            <article class="fe-news__card"
+                                data-aos="fade-left"
+                                data-aos-duration="1000"
+                                data-aos-delay="600"
+                                data-aos-mirror="true">
+                                <figure class="fe-news__figure">
+                                    <img src="./assets/images/news-landscape-1.jpg" alt="...">
+                                    <figcaption class="fe-news__caption">
+                                        <h6 class="fe-news__date"><span>november 19</span><span>2020</span></h6>
+                                        <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                            <div class="row">
+                                <div class="col-lg-6 pe-0">
+                                    <article class="fe-news__card fe-news__card--small fe-news__card--single"
+                                        data-aos="fade-right"
+                                        data-aos-duration="1000"
+                                        data-aos-delay="300"
+                                        data-aos-mirror="true">
+                                        <figure class="fe-news__figure">
+                                            <img src="./assets/images/news-portrait.png" alt="...">
+                                            <figcaption class="fe-news__caption">
+                                                <h6 class="fe-news__date">november <span> 19</span><span>2020</span></h6>
+                                                <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="col-lg-6 ps-0">
+                                    <article class="fe-news__card fe-news__card--small"
+                                    data-aos="fade-left"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="600"
+                                    data-aos-mirror="true">
+                                        <figure class="fe-news__figure">
+                                            <img src="./assets/images/news-portrait-2.jpg" alt="...">
+                                            <figcaption class="fe-news__caption">
+                                                <h6 class="fe-news__date">november <span> 19</span><span>2020</span></h6>
+                                                <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex d-lg-none fe-news__slider-row">
+                    <div class="col-12">
+                        <h5 class="fe-news__section-title"
+                            data-aos="fade-down"
+                            data-aos-duration="1000"
+                            data-aos-delay="300"
+                            data-aos-mirror="true">latest news</h5>
+                        <div class="fe-news__slider-wrapper js-slider">
+                            <div class="fe-news__slider">
+                                <article class="fe-news__card"
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                                data-aos-delay="800"
+                                data-aos-mirror="true">
+                                    <figure class="fe-news__figure">
+                                        <img src="./assets/images/lanscape-2.png" alt="...">
+                                        <figcaption class="fe-news__caption">
+                                            <h6 class="fe-news__date">november <span> 19</span><span>2020</span></h6>
+                                            <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="fe-news__slider">
+                                <article class="fe-news__card"
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                                data-aos-delay="900"
+                                data-aos-mirror="true">
+                                    <figure class="fe-news__figure">
+                                        <img src="./assets/images/news-landscape-1.jpg" alt="...">
+                                        <figcaption class="fe-news__caption">
+                                            <h6 class="fe-news__date">november <span> 19</span><span>2020</span></h6>
+                                            <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="fe-news__slider">
+                                <article class="fe-news__card"
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                                data-aos-delay="1000"
+                                data-aos-mirror="true">
+                                    <figure class="fe-news__figure">
+                                        <img src="./assets/images/news-portrait.png" alt="...">
+                                        <figcaption class="fe-news__caption">
+                                            <h6 class="fe-news__date">november <span> 19</span><span>2020</span></h6>
+                                            <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="fe-news__slider">
+                                <article class="fe-news__card fe-news__card--small"
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                                data-aos-delay="1100"
+                                data-aos-mirror="true">
+                                    <figure class="fe-news__figure">
+                                        <img src="./assets/images/news-portrait-2.jpg" alt="...">
+                                        <figcaption class="fe-news__caption">
+                                            <h6 class="fe-news__date">november <span> 19</span><span>2020</span></h6>
+                                            <h3 class="fe__h2"><a href="#">Molestie molesti metus, tempus in commodo, semper tellus</a></h3>
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                        </div>
+                        <a class="fe-news__more" href="#"
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
+                            data-aos-delay="1500"
+                            data-aos-mirror="true">
+                            <span class="fe__b1">See all news</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.91636 7.99997L4 3.0222L5.40467 1.59998L11.0234 7.28886C11.4113 7.6816 11.4113 8.31835 11.0234 8.71109L5.40467 14.4L4 12.9778L8.91636 7.99997Z" fill="#3C3C3C"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- mission section -->
+        <section class="fe-banner__section fe-banner__section--left"
+            data-aos="fade-in"
+            data-aos-duration="2000"
+            data-aos-delay="300"
+            data-aos-mirror="true">
+            <div class="fe-banner__hero">
+                <div class="container-xl fe-banner__hero-container">
+                    <div class="fe-banner__hero-wrapper">
+                        <h5 class="fe-banner__section-title"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                        data-aos-mirror="true">our mission</h5>
+                        <h2 class="fe-banner__slogan"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-delay="600"
+                        data-aos-mirror="true">Imperdiet quis leo scelerisque nunc magna mattis vitae non non</h2>
+                        <p class="fe__p1 mb-0"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-delay="900"
+                        data-aos-mirror="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</a>
+                    </div>
+                </div>
+                <div class="container-xl fe-banner__hero-container fe-banner__hero-container--img">
+                    <div class="fe-banner__hero-img">
+                        <img src="./assets/images/img2.jpg" alt="..."
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="1200"
+                        data-aos-mirror="true">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- benifit section -->
+        <section class="fe-benifits__section">
+            <div class="container-xl">
+                <div class="row">
+                    <h2 class="fe__h5 fe-benifits__title"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                        data-aos-mirror="true">beneficiaries</h2>
+                </div>
+            </div>
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="fe-benifits__custom-container">
+                            <div class="js-slider-2">
+                                <div class="fe-benifits__slider">
+                                    <article class="fe-benifits__card"
+                                    data-aos="fade-down"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="300"
+                                    data-aos-mirror="true">
+                                        <figure class="fe-benifits__figure">
+                                            <a class="fe-benifits__anchor-img" href="#">
+                                                <img src="./assets/images/b-1.png" alt="...">
+                                            </a>
+                                            <figcaption class="fe-benifits__caption">
+                                                <a href="#" class="fe__p1">Morbi magna turpis dolor adipiscing</a>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="fe-benifits__slider">
+                                    <article class="fe-benifits__card"
+                                    data-aos="fade-down"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="400"
+                                    data-aos-mirror="true">
+                                        <figure class="fe-benifits__figure">
+                                            <a class="fe-benifits__anchor-img" href="#">
+                                                <img src="./assets/images/b-2.jpg" alt="...">
+                                            </a>
+                                            <figcaption class="fe-benifits__caption">
+                                                <a href="#" class="fe__p1">Morbi magna turpis dolor adipiscing</a>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="fe-benifits__slider">
+                                    <article class="fe-benifits__card"
+                                    data-aos="fade-down"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="500"
+                                    data-aos-mirror="true">
+                                        <figure class="fe-benifits__figure">
+                                            <a class="fe-benifits__anchor-img" href="#">
+                                                <img src="./assets/images/b-3.jpg" alt="...">
+                                            </a>
+                                            <figcaption class="fe-benifits__caption">
+                                                <a href="#" class="fe__p1">Morbi magna turpis dolor adipiscing</a>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="fe-benifits__slider">
+                                    <article class="fe-benifits__card"
+                                    data-aos="fade-down"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="600"
+                                    data-aos-mirror="true">
+                                        <figure class="fe-benifits__figure">
+                                            <a class="fe-benifits__anchor-img" href="#">
+                                                <img src="./assets/images/b-4.jpg" alt="...">
+                                            </a>
+                                            <figcaption class="fe-benifits__caption">
+                                                <a href="#" class="fe__p1">Morbi magna turpis dolor adipiscing</a>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="fe-benifits__slider">
+                                    <article class="fe-benifits__card"
+                                    data-aos="fade-down"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="700"
+                                    data-aos-mirror="true">
+                                        <figure class="fe-benifits__figure">
+                                            <a class="fe-benifits__anchor-img" href="#">
+                                                <img src="./assets/images/b-1.png" alt="...">
+                                            </a>
+                                            <figcaption class="fe-benifits__caption">
+                                                <a href="#" class="fe__p1">Morbi magna turpis dolor adipiscing</a>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <div class="fe-benifits__slider">
+                                    <article class="fe-benifits__card"
+                                    data-aos="fade-down"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="800"
+                                    data-aos-mirror="true">
+                                        <figure class="fe-benifits__figure">
+                                            <a class="fe-benifits__anchor-img" href="#">
+                                                <img src="./assets/images/b-3.jpg" alt="...">
+                                            </a>
+                                            <figcaption class="fe-benifits__caption">
+                                                <a href="#" class="fe__p1">Morbi magna turpis dolor adipiscing</a>
+                                            </figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- founder section -->
+        <section class="fe-founders__section">
+            <div class="container-xl">
+                <div class="row">
+                    <h2 class="fe__h5"
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    data-aos-delay="300"
+                    data-aos-mirror="true">the founders</h2>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="splide fe-founders__splide"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="600"
+                            data-aos-mirror="true">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img class="fe-founders__img" src="./assets/images/founder.jpg">
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img class="fe-founders__img" src="./assets/images/lanscape-2.png">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery section -->
+        <section class="fe-gallery__section">
+            <div class="container-xl">
+                <div class="row d-flex d-md-none">
+                    <div class="col-12">
+                        <h5 class="fe-gallery__section-title"
+                        data-aos="fade-down"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                        data-aos-mirror="true">latest news</h5>
+                        <div class="fe-gallery__slider-wrapper js-slider">
+                            <div class="fe-gallery__slider">
+                                <article class="fe-gallery__card fe-gallery__border--right"
+                                data-aos="fade-right"
+                                data-aos-duration="1000"
+                                data-aos-delay="600"
+                                data-aos-mirror="true">
+                                    <figure class="fe-gallery__fig">
+                                        <img class="fe-gallery__img" src="./assets/images/gallery-1.jpg" alt="...">
+                                        <figcaption class="fe-gallery__caption">
+                                            Caption lorem ipsum dolor sit amet
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="fe-gallery__slider">
+                                <article class="fe-gallery__card fe-gallery__card--portrait">
+                                    <figure class="fe-gallery__fig">
+                                        <img class="fe-gallery__img" src="./assets/images/gallery-2.jpg" alt="...">
+                                        <figcaption class="fe-gallery__caption">
+                                            Caption lorem ipsum dolor sit amet
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                            <div class="fe-gallery__slider">
+                                <article class="fe-gallery__card fe-gallery__border--left">
+                                    <figure class="fe-gallery__fig">
+                                        <img class="fe-gallery__img" src="./assets/images/gallery-3.jpg" alt="...">
+                                        <figcaption class="fe-gallery__caption">
+                                            Caption lorem ipsum dolor sit amet
+                                        </figcaption>
+                                    </figure>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-none d-md-flex">
+                    <div class="col-md-4 p-0">
+                        <div class="fe-gallery__col-wrapper">
+                            <h2 class="fe-gallery__section-title"
+                            data-aos="fade-down"
+                            data-aos-duration="1000"
+                            data-aos-delay="300"
+                            data-aos-mirror="true">Gallery</h2>
+                            <article class="fe-gallery__card fe-gallery__border--right"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="300"
+                            data-aos-mirror="true">
+                                <figure class="fe-gallery__fig">
+                                    <img class="fe-gallery__img" src="./assets/images/gallery-1.jpg" alt="...">
+                                    <figcaption class="fe-gallery__caption">
+                                        Caption lorem ipsum dolor sit amet
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <article class="fe-gallery__card fe-gallery__card--portrait"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="1000"
+                        data-aos-mirror="true">
+                            <figure class="fe-gallery__fig">
+                                <img class="fe-gallery__img" src="./assets/images/gallery-2.jpg" alt="...">
+                                <figcaption class="fe-gallery__caption">
+                                    Caption lorem ipsum dolor sit amet
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="col-md-4 p-0">
+                        <article class="fe-gallery__card fe-gallery__border--left"
+                            data-aos="fade-left"
+                            data-aos-duration="1000"
+                            data-aos-delay="600"
+                            data-aos-mirror="true">
+                            <figure class="fe-gallery__fig">
+                                <img class="fe-gallery__img" src="./assets/images/gallery-3.jpg" alt="...">
+                                <figcaption class="fe-gallery__caption">
+                                    Caption lorem ipsum dolor sit amet
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <section class="fe-footer__section">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="fe-footer__logo-wrapper">
+                            <img src="./assets/icons/logo-light.svg" alt="logo light">
+                            <nav class="fe-footer__social-navigation d-flex d-md-none">
+                                <ul class="fe-footer__menu">
+                                    <li class="fe-footer__menu-item">
+                                        <a class="fe__icon fe__icon--twitter fe-footer__menu-link" href="#">
+                                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.38744 4.25625L9.42934 4.9483L8.73087 4.86356C6.18844 4.53872 3.96731 3.4371 2.08144 1.58693L1.15946 0.668915L0.92198 1.34684C0.419082 2.85804 0.740378 4.45398 1.78808 5.52735C2.34686 6.12054 2.22113 6.20528 1.25725 5.85219C0.92198 5.7392 0.628623 5.65446 0.600684 5.69683C0.502898 5.7957 0.838164 7.08092 1.10358 7.58937C1.46679 8.29553 2.20717 8.98758 3.01739 9.39716L3.70189 9.72199L2.89167 9.73612C2.10938 9.73612 2.08144 9.75024 2.16526 10.0468C2.44464 10.9649 3.54823 11.9394 4.77753 12.3631L5.64364 12.6597L4.88929 13.1116C3.77174 13.7613 2.45861 14.1285 1.14549 14.1567C0.516868 14.1709 0 14.2273 0 14.2697C0 14.411 1.70427 15.2019 2.69609 15.5126C5.67158 16.4306 9.20583 16.0351 11.86 14.4674C13.7459 13.3517 15.6318 11.1343 16.5118 8.98758C16.9868 7.84359 17.4617 5.75333 17.4617 4.75057C17.4617 4.10089 17.5037 4.01615 18.2859 3.23937C18.7469 2.78742 19.18 2.2931 19.2638 2.15187C19.4035 1.88352 19.3895 1.88352 18.6771 2.12362C17.4897 2.54732 17.3221 2.49083 17.9088 1.85528C18.3418 1.40333 18.8587 0.584174 18.8587 0.344077C18.8587 0.301707 18.6491 0.372324 18.4117 0.499434C18.1602 0.640668 17.6014 0.852518 17.1824 0.979629L16.428 1.21973L15.7435 0.753655C15.3663 0.499434 14.8355 0.216967 14.5561 0.132227C13.8437 -0.0655006 12.7541 -0.0372539 12.1115 0.18872C10.3653 0.824272 9.26171 2.46258 9.38744 4.25625Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="fe-footer__menu-item">
+                                        <a class="fe__icon fe__icon--linkedin fe-footer__menu-link" href="#">
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6399 9.80982C16.6399 6.49387 14.8803 4.95057 12.5332 4.95057C10.6395 4.95057 9.79171 5.9984 9.31832 6.73347V5.20436H5.75118C5.79819 6.21736 5.75118 16 5.75118 16H9.31832V9.97082C9.31832 9.64818 9.34147 9.32632 9.43578 9.09531C9.69356 8.45074 10.2805 7.78338 11.2659 7.78338C12.557 7.78338 13.0732 8.77331 13.0732 10.224V15.9997H16.6397L16.6399 9.80982Z" fill="white"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.7764 5.20431H0.209685V16H3.7764V5.20431Z" fill="white"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.01253 1.86473C3.98939 0.806221 3.23799 0 2.01784 0C0.797692 0 0 0.806221 0 1.86473C0 2.90131 0.774115 3.73074 1.97154 3.73074H1.99434C3.23799 3.73074 4.01253 2.90131 4.01253 1.86473Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="fe-footer__navigation-wrapper">
+                            <nav class="fe-footer__navigation">
+                                <ul class="fe-footer__menu">
+                                    <li class="fe-footer__menu-item"><a class="fe-footer__menu-link" href="#">Founders</a></li>
+                                    <li class="fe-footer__menu-item"><a class="fe-footer__menu-link" href="#">Beneficiaries</a></li>
+                                    <li class="fe-footer__menu-item"><a class="fe-footer__menu-link" href="#">Scholarships</a></li>
+                                    <li class="fe-footer__menu-item"><a class="fe-footer__menu-link" href="#">Press</a></li>
+                                    <li class="fe-footer__menu-item"><a class="fe-footer__menu-link" href="#">Blog</a></li>
+                                    <li class="fe-footer__menu-item"><a class="fe-footer__menu-link" href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <nav class="fe-footer__social-navigation d-none d-md-flex">
+                                <ul class="fe-footer__menu">
+                                    <li class="fe-footer__menu-item">
+                                        <a class="fe-footer__menu-link fe__icon fe__icon--twitter" href="#">
+                                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.38744 4.25625L9.42934 4.9483L8.73087 4.86356C6.18844 4.53872 3.96731 3.4371 2.08144 1.58693L1.15946 0.668915L0.92198 1.34684C0.419082 2.85804 0.740378 4.45398 1.78808 5.52735C2.34686 6.12054 2.22113 6.20528 1.25725 5.85219C0.92198 5.7392 0.628623 5.65446 0.600684 5.69683C0.502898 5.7957 0.838164 7.08092 1.10358 7.58937C1.46679 8.29553 2.20717 8.98758 3.01739 9.39716L3.70189 9.72199L2.89167 9.73612C2.10938 9.73612 2.08144 9.75024 2.16526 10.0468C2.44464 10.9649 3.54823 11.9394 4.77753 12.3631L5.64364 12.6597L4.88929 13.1116C3.77174 13.7613 2.45861 14.1285 1.14549 14.1567C0.516868 14.1709 0 14.2273 0 14.2697C0 14.411 1.70427 15.2019 2.69609 15.5126C5.67158 16.4306 9.20583 16.0351 11.86 14.4674C13.7459 13.3517 15.6318 11.1343 16.5118 8.98758C16.9868 7.84359 17.4617 5.75333 17.4617 4.75057C17.4617 4.10089 17.5037 4.01615 18.2859 3.23937C18.7469 2.78742 19.18 2.2931 19.2638 2.15187C19.4035 1.88352 19.3895 1.88352 18.6771 2.12362C17.4897 2.54732 17.3221 2.49083 17.9088 1.85528C18.3418 1.40333 18.8587 0.584174 18.8587 0.344077C18.8587 0.301707 18.6491 0.372324 18.4117 0.499434C18.1602 0.640668 17.6014 0.852518 17.1824 0.979629L16.428 1.21973L15.7435 0.753655C15.3663 0.499434 14.8355 0.216967 14.5561 0.132227C13.8437 -0.0655006 12.7541 -0.0372539 12.1115 0.18872C10.3653 0.824272 9.26171 2.46258 9.38744 4.25625Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="fe-footer__menu-item">
+                                        <a class="fe-footer__menu-link fe__icon fe__icon--linkedin" href="#">
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6399 9.80982C16.6399 6.49387 14.8803 4.95057 12.5332 4.95057C10.6395 4.95057 9.79171 5.9984 9.31832 6.73347V5.20436H5.75118C5.79819 6.21736 5.75118 16 5.75118 16H9.31832V9.97082C9.31832 9.64818 9.34147 9.32632 9.43578 9.09531C9.69356 8.45074 10.2805 7.78338 11.2659 7.78338C12.557 7.78338 13.0732 8.77331 13.0732 10.224V15.9997H16.6397L16.6399 9.80982Z" fill="white"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.7764 5.20431H0.209685V16H3.7764V5.20431Z" fill="white"/>
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.01253 1.86473C3.98939 0.806221 3.23799 0 2.01784 0C0.797692 0 0 0.806221 0 1.86473C0 2.90131 0.774115 3.73074 1.97154 3.73074H1.99434C3.23799 3.73074 4.01253 2.90131 4.01253 1.86473Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="fe-footer__bottom">
+                            <nav class="fe-footer__bottom-nav">
+                                <ul class="fe-footer__bottom-links">
+                                    <li class="fe-footer__bottom-item"><a class="fe-footer__bottom-link" href="#">Privacy Policy</a></li>
+                                    <li class="fe-footer__bottom-item"><a class="fe-footer__bottom-link" href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </nav>
+                            <div class="fe-footer__copyright">
+                                <p>© 2021 Company Name. All rights reserved.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+    <script src="./node_modules/aos/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

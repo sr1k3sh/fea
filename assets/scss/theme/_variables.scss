@@ -1,0 +1,51 @@
+/*------------------------------
+Replace Default font variable
+>> copy veriable from bootstrap/veriable.scss
+*/
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url("./../../fonts/Inter-VariableFont_slnt\,wght.ttf") format("sans-serif");
+}
+
+@font-face {
+  font-family: 'Galaxie', serif;
+  src: url("./../../fonts/GalaxieCopernicus.ttf");
+}
+
+
+:root{
+  --galaxie-cop: 'Galaxie', serif;
+  --inter: 'Inter', sans-serif;
+  --dark-grey: #3C3C3C;
+  --mid-grey: #C4C4C4;
+  --dusty-pink: #F2EFEE;
+  --gret-purp: #74788A;
+}
+
+*{
+  font-family: var(--galaxie-cop);
+}
+
+// $grid-columns: 16 !default;
+$grid-gutter-width: 1rem !default;
+
+$primary: #003A92;
+$secondary: #8C2531;
+$ternary: #D7C3AE;
+
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1200px,
+//   xxl: 1440px
+// );
+
+// $grid-breakpoints: (
+//   xs: 0,
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1600px
+// );
