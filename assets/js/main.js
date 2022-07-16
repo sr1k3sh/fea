@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+    /** slick silder */
     $('.js-slider').slick({
         variableWidth: true,
         arrows: false,
@@ -14,20 +16,42 @@ $(document).ready(function(){
         draggable: true,
     });
 
-    new Splide( '.splide' ,{
+    /** vertical slider */
+
+    var splide = new Splide( '.splide' ,{
         direction: 'ttb',
-        // height   : '565px',
-        wheel    : true,
-        wheelSleep: 500,
+        // wheel    : true,
+        // wheelSleep: 500,
+        arrows: false,
         pagination : false,
-        releaseWheel: true,
+        // releaseWheel: true,
         heightRatio: 0.4281,
+        speed: 1000,
         breakpoints: {
-            768: {
+            1024: {
                 destroy: true,
             },
         }
     }).mount();
+
+    const splideChangeLogic = ($this, $selector) =>{
+        var index = $this.attr('data-index');
+        $selector.removeClass("active");
+        $this.addClass("active");
+        splide.go(parseInt(index));
+    }
+
+    var $customButton = $('.js-custom-button');
+    $customButton.on('click',function(){
+        splideChangeLogic($(this), $customButton);
+    });
+
+    $customButton.hover(function(){
+        splideChangeLogic($(this), $customButton);
+    })
+
+
+    /** transition animation */
 
     AOS.init({
         offset:12,

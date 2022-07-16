@@ -54,6 +54,11 @@
         background-color: $white;
 
         & .splide__arrow{
+            &:hover{
+                & svg{
+                    fill: $primary !important;
+                }
+            }
             & svg{
                 fill: $white;
             }
@@ -61,6 +66,52 @@
 
         & .splide__slide img{
             height: 100%;
+        }
+    }
+
+    &__custom-arrows{
+        position: absolute;
+        bottom: 60px;
+        left: 77px;
+        width: calc(100% - 77px - 60px);
+    }
+
+    &__custom-list{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        & li{
+            padding: 20px 0;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $white;
+                opacity: 0.2;
+            }
+            &:last-child{
+                padding-bottom: 0;
+                &::after{
+                    content: unset;
+                }
+            }
+        }
+    }
+
+    &__custom-button{
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+        @extend .fe__h2;
+        color: $white;
+        transition: 0.3s;
+        &:hover{
+            color: $primary;
         }
     }
 }
