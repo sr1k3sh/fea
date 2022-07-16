@@ -9,8 +9,8 @@ $(document).ready(function(){
         variableWidth: true,
         arrows: false,
         dots: false,
-        // autoplay: true,
-        // autoplaySpeed: 1000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         draggable: true,
     });
 
@@ -86,15 +86,8 @@ $(document).ready(function(){
     $window.on("resize",function(){
         clearTimeout(timer);
         timer = setTimeout(function(){
-            if(toogleState){
-                if($window.width() >= 1200){
-                    $menuToggler.trigger('click');
-                    // $header.removeClass("opened");
-                    // $body.css({overflow:"auto"})
-                }else{
-                    // $header.addClass("opened");
-                    // $body.css({overflow:"hidden"})
-                }
+            if(toogleState && $window.width() >= 1200){
+                $menuToggler.trigger('click');
             }
         },0);
     });
