@@ -69,7 +69,7 @@ $(document).ready(function(){
         if($(this).hasClass("collapsed")){
             $header.removeClass("opened");
             $body.css({overflow:"auto"});
-            $topbar.slideDown();
+            $topbar.slideDown("fast");
             toogleState = false;
         }else{
             $header.addClass("opened");
