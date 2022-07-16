@@ -60,12 +60,15 @@
 
     &__main-site{
         &--fixed{
-            padding-top: 182px;
+            padding-top: 169px;
             @include media-breakpoint-up(md){
-                padding-top: 139px;
+                padding-top: 137px;
+            }
+            @include media-breakpoint-up(lg){
+                padding-top: 138px;
             }
             @include media-breakpoint-up(xl){
-                padding-top: 199px;
+                padding-top: 198px;
             }
         }
     }
@@ -97,3 +100,6 @@
 }
 
 
+.fancybox-caption__body{
+    @extend .fe__h3;
+}

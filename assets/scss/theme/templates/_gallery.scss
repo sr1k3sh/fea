@@ -36,6 +36,16 @@
             width: 100%;
             height: 100%;
             aspect-ratio: 321/240;
+            transform: scale(1);
+            transition: 0.3s;
+        }
+    }
+    &__anchor{
+        text-decoration: none;
+        &:hover{
+            #{$self}__img{
+                transform: scale(1.03);
+            }
         }
     }
 
@@ -61,10 +71,29 @@
     &__border{
         &--right{
             border-right: 0;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                right: -1px;
+                top: 0;
+                background-color: var(--dusty-pink);
+            }
         }
 
         &--left{
             border-left: 0;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                left: -1px;
+                top: 0;
+                background-color: var(--dusty-pink);
+            }
         }
     }
 

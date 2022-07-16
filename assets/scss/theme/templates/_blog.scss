@@ -3,6 +3,7 @@
 
     &__section{
         padding: 32px 0;
+        overflow-x: clip;
     }
 
     &__section-title{
@@ -22,6 +23,16 @@
         padding: 40px 41px 91px 40px;
         &--single{
             border-right: 0;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                right: -1px;
+                top: 0;
+                background-color: $white;
+            }
         }
 
         &--small{
@@ -78,19 +89,15 @@
         display: flex;
         flex-direction: row;
         margin-bottom: 16px;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 14px;
         font-family: var(--inter);
+        @extend .fe__h6;
         color: var(--gret-purp);
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         & span{
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 14px;
-            font-family: var(--inter);
+            @extend .fe__h6;
+            margin-bottom: 0;
             color: var(--gret-purp);
             display: flex;
             align-items: center;
@@ -176,9 +183,15 @@
         position: relative;
         &::after{
             transition: 0.5s;
-            width: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--mid-grey);
             content: "";
             position: absolute;
+            bottom: 0;
+            @include media-breakpoint-up(md){
+                width: 0;
+            }
         }
 
         &:hover{
@@ -242,10 +255,11 @@
             max-width: 255px;
         }
         & .fe__p1{
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 140%;
-            letter-spacing: -0.01em;
+            // font-weight: 400;
+            // font-size: 18px;
+            // line-height: 140%;
+            // letter-spacing: -0.01em;
+            @extend .fe__p1;
             margin-bottom: 0;
             text-decoration: none;
             color: var(--dark-grey);

@@ -28,7 +28,7 @@ $(document).ready(function(){
         heightRatio: 0.4281,
         speed: 1000,
         breakpoints: {
-            1024: {
+            992: {
                 destroy: true,
             },
         }

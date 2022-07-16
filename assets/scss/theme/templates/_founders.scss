@@ -17,7 +17,10 @@
         }
 
         & .container-fluid{
-            padding: 0 60px;
+            padding: 0 32px;
+            @include media-breakpoint-up(lg){
+                padding: 0 60px;
+            }
         }
 
         &::before{
@@ -26,7 +29,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: calc(100%/1.5);
+            min-height: 125px;
+            height: calc(100%/2.72);
+            @include media-breakpoint-up(sm){
+                height: calc(100%/3);
+            }
+            @include media-breakpoint-up(lg){
+                height: calc(100%/1.5);
+            }
             background-color: $ternary;
             z-index: 0;
         }
@@ -39,19 +49,24 @@
     &__figure{
         & img{
             width: 100%;
+            aspect-ratio: 311/175;
             max-height: 565px;
+
         }
     }
 
     &__img{
+        aspect-ratio: 311/175;
         width: 100%;
-        height: 565px;
+        @include media-breakpoint-up(lg){
+            height: 565px;
+            aspect-ratio: unset;
+        }
         object-fit: cover;
     }
 
     &__splide{
         padding: 0 !important;
-        background-color: $white;
 
         & .splide__arrow{
             &:hover{
@@ -110,8 +125,39 @@
         @extend .fe__h2;
         color: $white;
         transition: 0.3s;
-        &:hover{
+        &:hover , &.active{
             color: $primary;
+        }
+    }
+
+    &__fig{
+        position: relative;
+        margin: 0;
+    }
+
+    &__anchor{
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        @extend .fe__h2;
+        text-decoration: none;
+        color: $white;
+        margin-bottom: 0;
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+    }
+
+    &__slide{
+        &.splide__slide{
+            background-color: $white;
+            margin-bottom: 16px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            @include media-breakpoint-up(lg){
+                margin-bottom: 0;
+            }
         }
     }
 }
