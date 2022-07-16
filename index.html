@@ -32,7 +32,7 @@
     data-aos-duration="1000"
     data-aos-offset="600"
     data-aos-delay="500">
-        <nav class="fe-header__topbar">
+        <nav class="fe-header__topbar js-topbar">
             <div class="container-xl fe-header__topbar-container">
                 <ul class="fe-header__topbar-list">
                     <li class="fe-header__topbar-item">
@@ -54,15 +54,22 @@
                 </ul>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-xl fe-header__navbar">
+        <nav class="navbar navbar-expand-xl fe-header__navbar js-navbar">
             <div class="container-xl fe-header__navbar-container">
                 <div class="fe-header__logo-wrapper">
-                    <a class="fe-header__navbar-brand navbar-brand" href="#"
+                    <a class="fe-header__navbar-brand fe-header__navbar-brand--dark navbar-brand" href="#"
                         data-aos="fade-in"
                         data-aos-duration="1000"
                         data-aos-offset="600"
                         data-aos-delay="1000">
                         <img class="fe-header__logo-img" src="./assets/icons/logo.svg"/>
+                    </a>
+                    <a class="fe-header__navbar-brand fe-header__navbar-brand--light navbar-brand" href="#"
+                        data-aos="fade-in"
+                        data-aos-duration="1000"
+                        data-aos-offset="600"
+                        data-aos-delay="1000">
+                        <img class="fe-header__logo-img" src="./assets/icons/logo-alt.svg"/>
                     </a>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon">
@@ -82,7 +89,11 @@
                         data-aos-offset="600"
                         data-aos-delay="1000"
                         >
-                            <a class="fe-header__nav-link fe__p2 active" aria-current="page" href="#" role="button">Founders</a>
+                            <a class="fe-header__nav-link fe__p2 active dropdown-toggle" aria-current="page" href="#" role="button" id="dropdownMenuLink-2" data-bs-toggle="dropdown" aria-expanded="false">Founders</a>
+                            <ul class="fe-header__dropdown-menu dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="dropdownMenuButton2">
+                                <li class="fe-header__dropdown-li"><a class="fe-header__dropdown-item dropdown-item" href="#">Maria Kenter</a></li>
+                                <li class="fe-header__dropdown-li"><a class="fe-header__dropdown-item dropdown-item" href="#">Roger Septimus</a></li>
+                            </ul>
                         </li>
                         <li class="fe-header__nav-item"
                         data-aos="fade-down"
@@ -96,7 +107,11 @@
                         data-aos-duration="1000"
                         data-aos-offset="600"
                         data-aos-delay="1200">
-                            <a class="fe-header__nav-link fe__p2" href="#" role="button">Scholarships</a>
+                            <a class="fe-header__nav-link fe__p2 dropdown-toggle" href="#" role="button" id="dropdownMenuLink-1" data-bs-toggle="dropdown" aria-expanded="false">Scholarships</a>
+                            <ul class="fe-header__dropdown-menu dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="dropdownMenuButton1">
+                                <li class="fe-header__dropdown-li"><a class="fe-header__dropdown-item dropdown-item" href="#">Sed ut tincidunt euismod malesuada</a></li>
+                                <li class="fe-header__dropdown-li"><a class="fe-header__dropdown-item dropdown-item" href="#">Nunc, sit in varius pulvinar</a></li>
+                            </ul>
                         </li>
                         <li class="fe-header__nav-item"
                         data-aos="fade-down"

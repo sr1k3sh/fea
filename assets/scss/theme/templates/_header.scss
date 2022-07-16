@@ -8,7 +8,63 @@
             top: 0;
             width: 100%;
             z-index: 1;
+            &.opened{
+                height: 100%;
+                background-color: $primary;
 
+                #{$self}__navbar-container{
+                    &::before{
+                        content: unset;
+                    }
+                }
+
+                #{$self}__logo-wrapper{
+                    & .navbar-toggler{
+                        &-icon{
+                            & span{
+                                background-color: $white;
+                            }
+                        }
+                    }
+                }
+
+                #{$self}__navbar-brand{
+                    &--dark{
+                        display: none;
+                    }
+                    &--light{
+                        display: block;
+                        width: 149px;
+                    }
+                }
+
+                #{$self}__navbar-collapse{
+                    margin-top: 20px;
+                }
+
+                #{$self}__navbar-dropdown{
+                    padding: 0;
+                }
+
+                #{$self}__nav-item{
+                    padding: 16px 0 26px;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #C4C4C4;
+                        opacity: 0.1;
+                    }
+                }
+
+                #{$self}__nav-link{
+                    padding: 0;
+                    color: $white;
+                }
+            }
         }
     }
 
@@ -24,6 +80,12 @@
         flex-direction: column;
         position: relative;
         // background-color: $white;
+        &.scrolled{
+            background-color: $white;
+            @include media-breakpoint-up(lg){
+                padding: 32px 0 33px;
+            }
+        }
     }
 
     &__navbar-container{
@@ -202,6 +264,14 @@
         @include media-breakpoint-up(md){
             max-width: 327px;
         }
+
+        &--dark{
+            display: block;
+        }
+
+        &--light{
+            display: none;
+        }
     }
 
     &__logo-img{
@@ -214,7 +284,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 24px 0 22px;
+        padding: 35px 0 36px;
+        @include media-breakpoint-up(md){
+            padding: 24px 0 22px;
+        }
 
         &::after{
             content: "";
@@ -253,10 +326,10 @@
                     justify-content: center;
                     align-items: center;
                     & span{
-                        width: 25.5px;
-                        height: 2px;
-                        background-color: $secondary;
-                        margin-bottom: 8.5px;
+                        width: 24px;
+                        height: 1px;
+                        background-color: var(--dark-grey);
+                        margin-bottom: 4px;
                         display: flex;
                         position: relative;
                         transition: 0.2s all;
@@ -278,9 +351,9 @@
                 flex-direction: column;
                 justify-content: center;
                 & span{
-                    width: 25.5px;
-                    height: 2px;
-                    background-color: $secondary;
+                    width: 24px;
+                    height: 1px;
+                    background-color: var(--dark-grey);
                     margin-bottom: 0;
                     position: absolute;
                     transform: rotate(0deg);
@@ -304,20 +377,6 @@
         }
     }
 
-    &__navbar-collapse{
-        position: absolute;
-        background: white;
-        width: 100%;
-        z-index: 1;
-        left: 0;
-        // top: $header-height;
-        padding: 0;
-        @include media-breakpoint-up(xl){
-            position: relative;
-            top: 0;
-        }
-    }
-
     &__navbar-dropdown{
         padding: 13px 0 32px;
         @include media-breakpoint-up(xl){
@@ -326,6 +385,7 @@
     }
 
     &__nav-item{
+        position: relative;
         &:last-child{
             #{$self}__nav-link{
                 padding-right: 0;
@@ -337,8 +397,160 @@
         padding: 0 30px;
         color: var(--dark-grey);
         text-decoration: none;
+        &::after{
+            content: unset;
+        }
         &:hover{
             color: var(--dark-grey);
+            @include media-breakpoint-up(lg){
+                & + .dropdown-menu{
+                    display: block;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        background: white;
+                        top: 0;
+                        z-index: -1;
+                        left: -1000px;
+                        padding: 0 10000px;
+                        border-top: 1px solid var(--mid-grey);
+                        height: 100%;
+                        animation: custom-fade-down 0.6s forwards;
+                    }
+
+                    #{$self}__dropdown-li{
+                        opacity: 0;
+                        animation: custom-fade 0.6s 0.3s forwards;
+                    }
+                }
+            }
         }
+
+        @include media-breakpoint-up(lg){
+            padding-bottom: 53px;
+        }
+    }
+
+    &__dropdown-menu{
+        border: 0;
+        padding: 0 27px;
+        transition: 0.6s height;
+        background-color: transparent;
+        @include media-breakpoint-up(lg){
+            width: 387px;
+            transform: translateY(44px);
+            padding: 30px 0 32px;
+            padding-left: 30px;
+            &::after{
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 0;
+                background: white;
+                top: 0;
+                z-index: -1;
+                left: -1000px;
+                padding: 0 10000px;
+                border-top: 1px solid var(--mid-grey);
+            }
+        }
+
+        &.show{
+            // height: 100%;
+            // animation: custom-fad forwards;
+            // animation: custom-fade-down 0.6s forwards;
+            // animation-delay: 1s;
+            @include media-breakpoint-up(md){
+                #{$self}__dropdown-li{
+                    opacity: 0;
+                    animation: custom-fade 0.6s 0.3s forwards;
+                }
+                &::after{
+                    height: 100%;
+                    animation: custom-fade-down 0.6s forwards;
+                }
+            }
+        }
+
+    }
+
+    &__dropdown-li{
+
+        &:last-child{
+            #{$self}__dropdown-item{
+                padding-bottom: 0;
+                @include media-breakpoint-up(lg){
+                    padding-bottom: 30px;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg){
+            #{$self}__dropdown-item{
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    background-color: var(--mid-grey);
+                    left: 0;
+                    bottom: 0;
+                    transition: 0.6s;
+                }
+                &:hover{
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 80px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__dropdown-item{
+        color: $white;
+        @extend .fe__p2;
+        padding: 12px 0 0;
+        @include media-breakpoint-up(lg){
+            font-family: var(--galaxie-cop);
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 120%;
+            letter-spacing: -0.02em;
+            color: $primary;
+            padding: 30px 0;
+            max-width: 387px;
+        }
+        margin-bottom: 0;
+        position: relative;
+        white-space: normal;
+        &:hover{
+            background-color: $white;
+        }
+
+
+    }
+}
+
+@keyframes custom-fade-down {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes custom-fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
