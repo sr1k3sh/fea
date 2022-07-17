@@ -53,6 +53,7 @@ mobile
 ![screenshot-mobile](./assets/images/screenshot-mobile.png)
 
 tablet
+
 ![screenshot-tablet](./assets/images/screenshot-tablet.png)
 
 large
