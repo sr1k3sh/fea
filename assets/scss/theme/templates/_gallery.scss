@@ -12,7 +12,7 @@
 
     &__card{
         padding: 12px;
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
             padding: 40px;
         }
         border: 1px solid var(--dusty-pink);

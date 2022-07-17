@@ -95,6 +95,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        width: 100%;
         & li{
             padding: 20px 0;
             position: relative;
@@ -122,6 +123,8 @@
         margin: 0;
         background-color: transparent;
         border: 0;
+        width: 100%;
+        text-align: left;
         @extend .fe__h2;
         color: $white;
         transition: 0.3s;
@@ -133,6 +136,7 @@
     &__fig{
         position: relative;
         margin: 0;
+        height: 100%;
     }
 
     &__anchor{

@@ -20,8 +20,8 @@ $(document).ready(function(){
 
     var splide = new Splide( '.splide' ,{
         direction: 'ttb',
-        // wheel    : true,
-        // wheelSleep: 500,
+        wheel    : true,
+        wheelSleep: 500,
         arrows: false,
         pagination : false,
         // releaseWheel: true,
@@ -41,6 +41,7 @@ $(document).ready(function(){
         splide.go(parseInt(index));
     }
 
+
     var $customButton = $('.js-custom-button');
     $customButton.on('click',function(){
         splideChangeLogic($(this), $customButton);
@@ -48,7 +49,12 @@ $(document).ready(function(){
 
     $customButton.hover(function(){
         splideChangeLogic($(this), $customButton);
-    })
+    });
+
+    splide.on("move",function(current,prev,dest){
+        $customButton.removeClass('active');
+        $(`.js-custom-button[data-index="${dest}"]`).addClass("active");
+    });
 
 
     /** transition animation */
