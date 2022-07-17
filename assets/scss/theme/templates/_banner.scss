@@ -93,6 +93,7 @@
 
     &__section-title{
         margin-bottom: 16px;
+        @extend .fe__h5;
         @include media-breakpoint-up(lg){
             margin-bottom: 32px;
         }
