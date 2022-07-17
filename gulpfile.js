@@ -49,7 +49,7 @@ function jsTask(){
         files.splide,
         files.jsPath,
         ])
-        .pipe(concat('stkit-bundle.js'))
+        .pipe(concat('main-bundle.js'))
         .pipe(uglify())
         .pipe(dest('dist/js')
     );
