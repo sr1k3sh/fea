@@ -10,6 +10,42 @@ List of library used on the project.
 * gulp-sass/sass ( preprocessor)
 * slick carousel
 
+## folder structure
+
+* root
+    * assets
+        * fonts
+        * icons
+        * images
+        * js
+        * scss
+            * theme
+                * global
+                    * *.scss
+                * plugins
+                    * *.scss
+                * templates
+                    * *.scss
+                * _all.scss
+                * _mixins.scss
+                * _reboot.scss
+                * _reset.scss
+                * _variables.scss
+            * style.scss
+    * dist
+        * css
+            * style.css
+            * style.css.map
+        * js
+            * main-bundle.js
+    * node_modules
+        * n/a
+    * .gitignore
+    * gulpfile.js
+    * index.html
+    * package-lock.json
+    * package.json
+    * README.md
 ## screenshot
 
 mobile
