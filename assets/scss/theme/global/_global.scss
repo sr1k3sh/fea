@@ -103,3 +103,24 @@
 .fancybox-caption__body{
     @extend .fe__h3;
 }
+
+
+@keyframes custom-fade-down {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes custom-fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
