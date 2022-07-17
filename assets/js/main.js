@@ -1,63 +1,6 @@
 $(document).ready(function(){
 
-    /** slick silder */
-    $('.js-slider').slick({
-        variableWidth: true,
-        arrows: false,
-        dots: false
-    });
-
-    $('.js-slider-2').slick({
-        variableWidth: true,
-        arrows: false,
-        dots: false,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        draggable: true,
-    });
-
-    /** vertical slider */
-
-    var splide = new Splide( '.splide' ,{
-        direction: 'ttb',
-        wheel    : true,
-        wheelSleep: 500,
-        arrows: false,
-        pagination : false,
-        // releaseWheel: true,
-        heightRatio: 0.4281,
-        speed: 1000,
-        breakpoints: {
-            992: {
-                destroy: true,
-            },
-        }
-    }).mount();
-
-    const splideChangeLogic = ($this, $selector) =>{
-        var index = $this.attr('data-index');
-        $selector.removeClass("active");
-        $this.addClass("active");
-        splide.go(parseInt(index));
-    }
-
-
-    var $customButton = $('.js-custom-button');
-    $customButton.on('click',function(){
-        splideChangeLogic($(this), $customButton);
-    });
-
-    $customButton.hover(function(){
-        splideChangeLogic($(this), $customButton);
-    });
-
-    splide.on("move",function(current,prev,dest){
-        $customButton.removeClass('active');
-        $(`.js-custom-button[data-index="${dest}"]`).addClass("active");
-    });
-
-
-    /** transition animation */
+   /** animation */
 
     AOS.init({
         offset:12,
@@ -170,8 +113,5 @@ $(document).ready(function(){
 
     }
 
-    /** fancybox */
-    $('[data-fancybox="gallery"]').fancybox({
-        // Options will go here
-    });
+
 });
