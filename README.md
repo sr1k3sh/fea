@@ -11,7 +11,7 @@ List of library used on the project.
 * slick carousel
 
 ## demo url
-[demo] (https://fea.onrender.com/)
+[demo link](https://fea.onrender.com/)
 
 ## folder structure
 
