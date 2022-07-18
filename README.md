@@ -10,6 +10,9 @@ List of library used on the project.
 * gulp-sass/sass ( preprocessor)
 * slick carousel
 
+## demo url
+[demo] (https://fea.onrender.com/)
+
 ## folder structure
 
 * root
